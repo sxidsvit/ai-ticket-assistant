@@ -1,11 +1,27 @@
-# AI-Ticket-Assistant - ChaiCode
 
-Welcome to the AI-Powered Ticket Management System!
-This course is a part of Chaicode youtube video series. This project is a web application that uses AI to automatically categorize, prioritize, and assign support tickets to the most appropriate moderators.
-
-# AI-Powered Ticket Management System
+# AI-Powered Ticket Assistant
 
 A smart ticket management system that uses AI to automatically categorize, prioritize, and assign support tickets to the most appropriate moderators.
+
+* Node.js with Express for backend
+* MongoDB for database
+* Authentication**: JWT for Authentication
+* Inngest for Background Jobs
+* Google Gemini API for AI Integration
+* Nodemailer with Mailtrap for email
+* Nodemon for hot reloading 
+
+[Site](https://ai-ticket-assistant-sxidsvit.vercel.app/)
+
+## Target Audience
+
+Developers interested in creating applications that use artificial intelligence under the hood.
+
+---
+
+![]()<img src="demo.gif" alt="Table" width="960" height="496" style="display: block; margin-left:100px ;"> 
+
+---
 
 ## 🚀 Features
 
@@ -33,22 +49,6 @@ A smart ticket management system that uses AI to automatically categorize, prior
   - Automated email notifications
   - Asynchronous ticket processing
 
-## 🛠️ Tech Stack
-
-- **Backend**: Node.js with Express
-- **Database**: MongoDB
-- **Authentication**: JWT
-- **Background Jobs**: Inngest
-- **AI Integration**: Google Gemini API
-- **Email**: Nodemailer with Mailtrap
-- **Development**: Nodemon for hot reloading
-
-## 📋 Prerequisites
-
-- Node.js (v14 or higher)
-- MongoDB
-- Google Gemini API key
-- Mailtrap account (for email testing)
 
 ## ⚙️ Installation
 
@@ -90,33 +90,44 @@ A smart ticket management system that uses AI to automatically categorize, prior
 
 ## 🚀 Running the Application
 
-1. **Start the main server**
+1. **Start the backend server**
 
    ```bash
+   cd backend
    npm run dev
    ```
 
 2. **Start the Inngest dev server**
+Open new terminal
    ```bash
+   cd backend
    npm run inngest-dev
    ```
+
+ 3. **Start the frontend server**
+
+   ```bash
+   cd frontend
+   npm run dev
+   ```  
 
 ## 📝 API Endpoints
 
 ### Authentication
 
 - `POST /api/auth/signup` - Register a new user
-- `POST /api/auth/login` - Login and get JWT token
+- `POST /api/auth/login`  - Login and get JWT token
+- `POST /api/auth/logout` - Logout current user
 
 ### Tickets
 
-- `POST /api/tickets` - Create a new ticket
-- `GET /api/tickets` - Get all tickets for logged-in user
+- `POST /api/tickets`    - Create a new ticket
+- `GET /api/tickets`     - Get all tickets for logged-in user
 - `GET /api/tickets/:id` - Get ticket details
 
 ### Admin
 
-- `GET /api/auth/users` - Get all users (Admin only)
+- `GET /api/auth/users`        - Get all users (Admin only)
 - `POST /api/auth/update-user` - Update user role & skills (Admin only)
 
 ## 🔄 Ticket Processing Flow
@@ -159,7 +170,7 @@ A smart ticket management system that uses AI to automatically categorize, prior
 
 2. **Test Ticket Creation**
    ```bash
-   curl -X POST http://localhost:3000/api/tickets \
+   curl -X GET http://localhost:3000/api/tickets \
    -H "Content-Type: application/json" \
    -H "Authorization: Bearer YOUR_JWT_TOKEN" \
    -d '{
@@ -205,9 +216,6 @@ A smart ticket management system that uses AI to automatically categorize, prior
 - `mongoose`: ^8.13.2
 - `nodemailer`: ^6.10.1
 
-## 🤝 Contributing
-
-we don't accept contributions for this project, as this is a part of a video and code files needs to given as it is.
 
 ## 🙏 Acknowledgments
 
@@ -215,3 +223,11 @@ we don't accept contributions for this project, as this is a part of a video and
 - Google Gemini for AI capabilities
 - Mailtrap for email testing
 - MongoDB for database
+- [Hitesh Cloudhary](https://www.youtube.com/@HiteshCodeLab)  for inspiration  and invaluable contributions
+
+
+## Contact:
+
+[<img alt="webDev | LinkedIn" src="https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />][linkedin]
+
+[linkedin]: https://www.linkedin.com/in/sergiy-antonyuk/
