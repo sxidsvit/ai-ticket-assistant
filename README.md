@@ -11,7 +11,7 @@ A smart ticket management system that uses AI to automatically categorize, prior
 * Nodemailer with Mailtrap for email
 * Nodemon for hot reloading 
 
-[Site](https://ai-ticket-assistant-sxidsvit.vercel.app/)
+[Site](https://ai-ticket-assistant.vercel.app/)
 
 ## Target Audience
 
