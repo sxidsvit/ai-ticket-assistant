@@ -19,7 +19,7 @@ Developers interested in creating applications that use artificial intelligence 
 
 ---
 
-![]()<img src="demo.gif" alt="Table" width="960" height="496" style="display: block; margin-left:100px ;"> 
+![](demo.gif)
 
 ---
 
