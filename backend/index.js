@@ -14,7 +14,14 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: ["https://ai-ticket-assistant.vercel.app", "http://localhost:3000"]
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
