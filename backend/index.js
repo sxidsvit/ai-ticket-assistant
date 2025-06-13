@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const corsOptions = {
-  origin: ["https://ai-ticket-assistant.vercel.app", "http://localhost:3000"]
+  origin: ["https://ai-ticket-assistant.vercel.app", "http://localhost:3000"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
