@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function SignupPage() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -76,6 +76,13 @@ export default function SignupPage() {
             >
               {loading ? "Signing up..." : "Sign Up"}
             </button>
+
+            {loading ? "" :
+              (<Link to="/login"
+                className="flex items-center justify-center mt-3 hover:text-gray-900 text-gray-400">
+                Already registered? - Login
+              </Link>)
+            }
           </div>
         </form>
       </div>
